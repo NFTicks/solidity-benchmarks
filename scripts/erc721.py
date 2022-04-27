@@ -8,6 +8,7 @@ variations = {
     "A": "ERC721A",
     "B": "ERC721B",
     "K": "ERC721K",
+    "NFT": "NFT"
 }
 
 # Methods to format .gas-snapshot line to an object with relevant info

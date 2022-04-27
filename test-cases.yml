@@ -2,7 +2,7 @@ contracts:
   erc20:
     variations: [OZ, Solmate]
   erc721:
-    variations: [OZ, OZEnumerable, Solmate, A, B, K]
+    variations: [OZ, OZEnumerable, Solmate, A, B, K, NFT]
     methods:
       # Transfer
       # - For transfer tests, there is one account with tokens from 1 to 100.
