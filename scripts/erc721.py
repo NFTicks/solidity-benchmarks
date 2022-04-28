@@ -44,6 +44,15 @@ def safeMint(line):
         "gas": match.group(2)
     }
 
+burn_regex = re.compile("burn_id(\d+).+gas:\s(\d+)")
+
+
+def burn(line):
+    match = re.search(burn_regex, line)
+    return {
+        "key": match.group(1),
+        "gas": match.group(2)
+    }
 
 transferToOwner_regex = re.compile("transferToOwner_id(\d+).+gas:\s(\d+)")
 
@@ -179,6 +188,7 @@ def group(lines):
     methods["deploy"] = rows_for_method("deploy", deploy)
     methods["mint"] = rows_for_method("mint", mint)
     methods["safeMint"] = rows_for_method("safeMint", safeMint)
+    methods["burn"] = rows_for_method("burn", burn)
     methods["approve"] = rows_for_method("approve", approve)
     methods["setApprovalForAll"] = rows_for_method(
         "setApprovalForAll", setApprovalForAll)

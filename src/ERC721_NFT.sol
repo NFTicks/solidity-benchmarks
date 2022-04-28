@@ -15,4 +15,8 @@ contract ERC721_NFT is ERC721 {
     function safeMint(address to, uint256 amount) external payable {
         _safeMint(to, amount);
     }
+
+    function burn(uint256 tokenId) external {
+        _burn(tokenId);
+    }
 }
